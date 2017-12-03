@@ -16,7 +16,7 @@ function isNotNumber(element) {
 
 
 
-function CheckforErrors() {
+function CheckforErrors2() {
 
     if (minimumField.value > maximumField.value) {
         showErrorMessageAt(span2, "O valor mínimo precisa ser menor que o valor máximo")
@@ -63,6 +63,7 @@ function CleanErrorMessages() {
     errorsCount = 0
     removeErrorMessageAt(span1)
     removeErrorMessageAt(span2)
+    removeErrorMessageAt(span3)
 }
 
 function getResult() {
@@ -76,10 +77,10 @@ function getResult() {
     alert(`Existem ${result} números que são multiplos de 2 e 3 entre ${minimumField.value} e ${maximumField.value}`)
 }
 
-function Validate() {
-    CheckforErrors();
+function ValidateQ1() {
+    CheckforErrors2()
 
     if (hasNoError()) {
         getResult()
     }
-};
+}

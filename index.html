@@ -2,7 +2,8 @@
 <html>
 
 <head>
-    <!-- <link rel="stylesheet" href="app/app.css" /> -->
+    <link rel="stylesheet" href="app/app.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 
 <body>
@@ -12,7 +13,7 @@
         <div class="input">
             <label for="min-value">Informe um valor mínimo:</label>
             <input id="min-value" type="text" onfocus="CleanErrorMessages()">
-            <span style="" id="span1"></span>
+            <span id="span1"></span>
         </div>
 
         <div class="input">
@@ -21,10 +22,35 @@
             <span id="span2"></span>
         </div>
 
-        <input type="button" onclick="Validate();" value="Calcular" />
+        <input type="button" onclick="ValidateQ1();" value="Calcular" />
     </div>
-    <div id="q2"></div>
-    <div id="q3"></div>
+    <div id="q2">
+        <h2>Questão 2</h2>
+        <div class="input">
+            <label for="field">Calcular o Fatorial de:</label>
+            <input id="field" type="text" onfocus="CleanErrorMessages()">
+            <span id="span3"></span>
+        </div>
+
+        <input type="button" onclick="ValidateQ2();" value="Calcular" />
+    </div>
+    <div id="q3">
+        <h2>Questão 3</h2>
+        <input type="button" onclick="gerarAlunos()" value="Gerar Alunos" />
+        <input type="button" onclick="Toggle()" value="Toggle Relatório" />
+
+        <div style="display: none" id="relatorio">
+            <table>
+                <caption>Relatório</caption>
+
+                <tbody id="table">
+                </tbody>
+                <tfoot id="tfoot">
+
+                </tfoot>
+            </table>
+        </div>
+    </div>
     <div id="q4"></div>
     <div id="q5"></div>
     <div id="q6"></div>
@@ -42,8 +68,8 @@
     </script>
     <script src="q1.js"></script>
     <script src="q2.js"></script>
-    <!-- <script src="q3"></script>
-    <script src="q4"></script>
+    <script src="q3.js"></script>
+    <!--<script src="q4"></script>
     <script src="q5"></script>
     <script src="q6"></script> -->
 </body>

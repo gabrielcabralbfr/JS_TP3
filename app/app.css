@@ -1,0 +1,86 @@
+/* GERAL */
+
+body {
+    background-color: #e1e1e1;
+    font-family: 'Roboto'
+}
+
+#q1,
+#q2,
+#q3,
+#q4,
+#q5,
+#q6 {
+    border: 1px #e1e1e1 solid;
+    padding: 50px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+
+/* END GERAL*/
+
+
+/* QUESTÃO 1 */
+
+input[type='text'] {
+    margin: 10px;
+    width: 100px;
+    height: 18px;
+    border-radius: 1px;
+}
+
+
+/* END QUESTÃO 1 */
+
+
+/* QUESTÃO 3 */
+
+#relatorio>table {
+    margin: 10px;
+    width: 100%;
+}
+
+#relatorio>table td {
+    border: 1px #000 solid;
+    padding: 15px;
+    text-align: center;
+}
+
+#relatorio>table tr {
+    margin: 23px;
+}
+
+input[type='button'] {
+    width: 120px;
+    height: 30px;
+    background-color: #85cc87;
+    color: #fff;
+    border: none;
+    -webkit-transition: width .3s, height .3s; /* Safari */
+    transition: width .3s, height .3s ;
+}
+
+input[type='button']:hover {
+    width: 123px;
+    height: 33px;
+    box-shadow: 5px 5px 5px #e1e1e1;
+
+}
+
+#relatorio>table tr:nth-child(even) {
+    background-color: #e1e1e1;
+}
+
+tfoot {
+    background-color: #000;
+    color: #fff;
+}
+
+caption {
+    font-size: 2em;
+}
+
+
+/* END QUESTÃO 3*/
