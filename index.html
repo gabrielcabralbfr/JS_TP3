@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- <link rel="stylesheet" href="app/app.css" /> -->
+</head>
+
+<body>
+    <h1>Teste de Performance 3</h1>
+    <div id="q1">
+        <h2>Questão 1</h2>
+        <div class="input">
+            <label for="min-value">Informe um valor mínimo:</label>
+            <input id="min-value" type="text" onfocus="CleanErrorMessages()">
+            <span style="" id="span1"></span>
+        </div>
+
+        <div class="input">
+            <label for="max-value">Informe um valor máximo:</label>
+            <input id="max-value" type="text" onfocus="CleanErrorMessages()">
+            <span id="span2"></span>
+        </div>
+
+        <input type="button" onclick="Validate();" value="Calcular" />
+    </div>
+    <div id="q2"></div>
+    <div id="q3"></div>
+    <div id="q4"></div>
+    <div id="q5"></div>
+    <div id="q6"></div>
+
+    <script>
+        var app = {};
+        app.getComponente = function (nome) {
+            if (!app[nome]) {
+                app[nome] = {
+                    $ctrl: {}
+                };
+            }
+            return app[nome];
+        };
+    </script>
+    <script src="q1.js"></script>
+    <script src="q2.js"></script>
+    <!-- <script src="q3"></script>
+    <script src="q4"></script>
+    <script src="q5"></script>
+    <script src="q6"></script> -->
+</body>
+
+</html>
