@@ -1,15 +1,21 @@
-function Toggle() {
-    const report = document.getElementById("relatorio");
+let Alunos = [];
+const report = document.getElementById("relatorio");
 
-    if (report.style.display === "none") {
-        report.style.display = "block";
+function Toggle() {
+
+
+    if (report.classList.contains('slideIn')) {
+        report.classList.remove('slideIn')
+        report.classList.add('slideOut')
     } else {
-        report.style.display = "none";
+
+        report.classList.remove('slideOut')
+        report.classList.add('slideIn')
     }
 
 }
 
-function S4() {
+function generateRandom() {
     return (((1 + Math.random()) * 0x10000) | 0).toString(16).substring(1);
 }
 
@@ -18,13 +24,6 @@ function getRandomGrade() {
 }
 
 class Aluno {
-    constructor(nome, nota) {
-        this.Guid = (S4() + "-x" + S4().substr(0, 3)).toLowerCase();
-        this.nome = nome;
-        this.nota = nota;
-        this.status = "teste";
-    }
-
     getNome() {
         return this.nome;
     }
@@ -33,25 +32,26 @@ class Aluno {
         return Math.round(this.nota, 2);
     }
 
+    SetStatus() {
+        if (this.getNota() >= 60) {
+            return this.status = "Aprovado"
+        } else {
+            return this.status = "Reprovado"
+        }
+    }
     getStatus() {
         return this.status;
     }
 
-    SetRandomStatus() {
-        let random = Math.floor((Math.random() * 2) + 1)
-
-        switch (random) {
-            case 1:
-                this.status = "Aprovado";
-                break;
-
-            case 2:
-                this.status = "Reprovado";
-                break;
-        }
+    constructor(nome, nota) {
+        this.Guid = (generateRandom() + "-" + generateRandom().substr(0, 3)).toLowerCase();
+        this.nome = nome;
+        this.nota = nota;
+        this.status = this.SetStatus()
     }
+
 }
-let Alunos = [];
+
 
 function getStatusResult(aluno) {
     const tfoot = document.getElementById("tfoot");
@@ -89,7 +89,6 @@ function createAlunoInDOM(Aluno) {
     table.appendChild(row);
     row.appendChild(data1);
 
-    Aluno.SetRandomStatus();
 
     data1.innerHTML = `Aluno nº ${Aluno.Guid} - Nota: ${Aluno.getNota()} Status: ${Aluno.getStatus()}`;
 
@@ -98,11 +97,13 @@ function createAlunoInDOM(Aluno) {
 
 function gerarAlunos() {
 
+
     // Populando o array de alunos
     for (let i = 0; i < 20; i++) {
         Alunos.push(new Aluno(Math.random().toString(36).substring(7), getRandomGrade()));
     }
 
+    // Inserindo cada aluno na DOM
     for (let aluno of Alunos) {
         createAlunoInDOM(aluno);
 

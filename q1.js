@@ -1,22 +1,17 @@
+import {
+    isNotNumber,
+    hasNoError,
+    showErrorMessageAt
+} from 'validation';
+
 const minimumField = document.getElementById("min-value")
-const maximumField = document.getElementById("max-value")
+const maximumField = document.getElementById("max-value")\
 
 const span1 = document.getElementById("span1")
 const span2 = document.getElementById("span2")
 
-let errorsCount = 0
 
-function isNotNumber(element) {
-    if (element.value == "" || element.value == undefined || element.value == null || isNaN(element.value)) {
-        return true;
-    }
-
-    return false;
-}
-
-
-
-function CheckforErrors2() {
+function CheckforErrors1() {
 
     if (minimumField.value > maximumField.value) {
         showErrorMessageAt(span2, "O valor mínimo precisa ser menor que o valor máximo")
@@ -37,36 +32,7 @@ function CheckforErrors2() {
 
 }
 
-
-function hasNoError() {
-    if (errorsCount == 0) {
-        return true
-    } else {
-        return false
-    }
-}
-
-
-function showErrorMessageAt(element, errorMessage) {
-
-    element.innerHTML = errorMessage
-    element.style.color = '#f00'
-
-}
-
-function removeErrorMessageAt(element) {
-    element.innerHTML = ""
-    element.style.color = '#f00'
-}
-
-function CleanErrorMessages() {
-    errorsCount = 0
-    removeErrorMessageAt(span1)
-    removeErrorMessageAt(span2)
-    removeErrorMessageAt(span3)
-}
-
-function getResult() {
+function getResultQuestion1() {
     let result = 0
 
     for (let i = minimumField.value; i < maximumField.value; i++) {
@@ -78,9 +44,9 @@ function getResult() {
 }
 
 function ValidateQ1() {
-    CheckforErrors2()
+    CheckforErrors1()
 
     if (hasNoError()) {
-        getResult()
+        getResultQuestion1()
     }
 }

@@ -18,6 +18,26 @@ body {
     margin: 5px;
 }
 
+.slideIn{
+    height: 100%;
+    opacity: 1;
+    -webkit-transition:  opacity .8s, height .6s; /* Safari */
+    transition: opacity .8s, height .6s;
+}
+.slideOut{
+    opacity: 0;
+    -webkit-transition:  opacity .8s, height .6s; /* Safari */
+    transition: opacity .8s, height .6s;
+    height: 0;
+}
+
+span { 
+    visibility: hidden;
+}
+
+label{
+    display: block;
+}
 
 /* END GERAL*/
 
@@ -25,7 +45,7 @@ body {
 /* QUESTÃO 1 */
 
 input[type='text'] {
-    margin: 10px;
+    margin: 10px 0;
     width: 100px;
     height: 18px;
     border-radius: 1px;
