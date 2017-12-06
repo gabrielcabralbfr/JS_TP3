@@ -8,6 +8,30 @@ const span6 = document.getElementById("span6")
 
 let errors = 0
 
+
+let html = "<h2>Questão 4</h2>
+
+        <div class="input">
+            <label for="qtd-numbers">Quantidade de números:</label>
+            <input id="qtd-numbers" type="text" onfocus="CleanErrorMessages()">
+            <span id="span4"></span>
+        </div>
+
+        <div class="input">
+            <label for="min-value2">Informe um valor mínimo:</label>
+            <input id="min-value2" type="text" onfocus="CleanErrorMessages()">
+            <span id="span5"></span>
+        </div>
+
+        <div class="input">
+            <label for="max-value2">Informe um valor máximo:</label>
+            <input id="max-value2" type="text" onfocus="CleanErrorMessages()">
+            <span id="span6"></span>
+        </div>
+        <input type="button" onclick="ValidateQ4();" value="Calcular" />
+
+    "
+
 function isNotNumber4(element) {
     if (element.value == "" || element.value == undefined || element.value == null || isNaN(element.value)) {
         return true;

@@ -1,6 +1,27 @@
 let Alunos = [];
 const report = document.getElementById("relatorio");
 
+let html = " <h2>Questão 3</h2>
+<input type="button" onclick="gerarAlunos()" value="Gerar Alunos" />
+<input type="button" onclick="Toggle()" value="Toggle Relatório" />
+
+<div id="relatorio" class="slideOut">
+    <table>
+        <caption>Relatório</caption>
+
+        <tbody id="table">
+        </tbody>
+        <tfoot id="tfoot">
+
+        </tfoot>
+    </table>
+</div>"
+
+
+
+
+
+
 function Toggle() {
 
 

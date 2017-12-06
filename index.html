@@ -3,77 +3,13 @@
 
 <head>
     <link rel="stylesheet" href="app/app.css" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 
 <body>
-    <h1>Teste de Performance 3</h1>
-    <div id="q1">
-        <h2>Questão 1</h2>
-        <div class="input">
-            <label for="min-value">Informe um valor mínimo:</label>
-            <input id="min-value" type="text" onfocus="CleanErrorMessages()">
-            <span id="span1"></span>
-        </div>
-
-        <div class="input">
-            <label for="max-value">Informe um valor máximo:</label>
-            <input id="max-value" type="text" onfocus="CleanErrorMessages()">
-            <span id="span2"></span>
-        </div>
-
-        <input type="button" onclick="ValidateQ1();" value="Calcular" />
-    </div>
-    <div id="q2">
-        <h2>Questão 2</h2>
-        <div class="input">
-            <label for="field">Calcular o Fatorial de:</label>
-            <input id="field" type="text" onfocus="CleanErrorMessages()">
-            <span id="span3"></span>
-        </div>
-
-        <input type="button" onclick="ValidateQ2();" value="Calcular" />
-    </div>
-    <div id="q3">
-        <h2>Questão 3</h2>
-        <input type="button" onclick="gerarAlunos()" value="Gerar Alunos" />
-        <input type="button" onclick="Toggle()" value="Toggle Relatório" />
-
-        <div id="relatorio" class="slideOut">
-            <table>
-                <caption>Relatório</caption>
-
-                <tbody id="table">
-                </tbody>
-                <tfoot id="tfoot">
-
-                </tfoot>
-            </table>
-        </div>
-    </div>
-    <div id="q4">
-        <h2>Questão 4</h2>
-
-        <div class="input">
-            <label for="qtd-numbers">Quantidade de números:</label>
-            <input id="qtd-numbers" type="text" onfocus="CleanErrorMessages()">
-            <span id="span4"></span>
-        </div>
-
-        <div class="input">
-            <label for="min-value2">Informe um valor mínimo:</label>
-            <input id="min-value2" type="text" onfocus="CleanErrorMessages()">
-            <span id="span5"></span>
-        </div>
-
-        <div class="input">
-            <label for="max-value2">Informe um valor máximo:</label>
-            <input id="max-value2" type="text" onfocus="CleanErrorMessages()">
-            <span id="span6"></span>
-        </div>
-        <input type="button" onclick="ValidateQ4();" value="Calcular" />
-
-    </div>
+    <div id="q1"></div>
+    <div id="q2"></div>
+    <div id="q3"></div>
+    <div id="q4"></div>
     <div id="q5"></div>
     <div id="q6"></div>
 
@@ -88,14 +24,12 @@
             return app[nome];
         };
     </script>
-
-    <script src="validation.js"></script>
     <script src="q1.js"></script>
     <script src="q2.js"></script>
-    <script src="q3.js"></script>
+    <!-- <script src="q3.js"></script>
     <script src="q4.js"></script>
-    <!--<script src="q5"></script>
-    <script src="q6"></script> -->
+    <script src="q5.js"></script>
+    <script src="q6.js"></script> -->
 </body>
 
 </html>
