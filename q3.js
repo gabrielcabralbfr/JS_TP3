@@ -1,13 +1,9 @@
-let Alunos = [];
-const report = document.getElementById("relatorio");
-
-let html = " <h2>Questão 3</h2>
+document.getElementById("q3").innerHTML = `<h2>Questao 3</h2>
 <input type="button" onclick="gerarAlunos()" value="Gerar Alunos" />
-<input type="button" onclick="Toggle()" value="Toggle Relatório" />
 
 <div id="relatorio" class="slideOut">
     <table>
-        <caption>Relatório</caption>
+        <caption>Relatorio</caption>
 
         <tbody id="table">
         </tbody>
@@ -15,26 +11,11 @@ let html = " <h2>Questão 3</h2>
 
         </tfoot>
     </table>
-</div>"
+</div>`
 
 
-
-
-
-
-function Toggle() {
-
-
-    if (report.classList.contains('slideIn')) {
-        report.classList.remove('slideIn')
-        report.classList.add('slideOut')
-    } else {
-
-        report.classList.remove('slideOut')
-        report.classList.add('slideIn')
-    }
-
-}
+let Alunos = [];
+const report = document.getElementById("relatorio");
 
 function generateRandom() {
     return (((1 + Math.random()) * 0x10000) | 0).toString(16).substring(1);
@@ -111,13 +92,15 @@ function createAlunoInDOM(Aluno) {
     row.appendChild(data1);
 
 
-    data1.innerHTML = `Aluno nº ${Aluno.Guid} - Nota: ${Aluno.getNota()} Status: ${Aluno.getStatus()}`;
-
+    data1.innerHTML = `Matricula: ${Aluno.Guid} - Nota: ${Aluno.getNota()} Status: ${Aluno.getStatus()}`;
 
 }
 
 function gerarAlunos() {
 
+    document.getElementById("table").innerHTML = "";
+    document.getElementById("tfoot").innerHTML = "";
+    Alunos = [];
 
     // Populando o array de alunos
     for (let i = 0; i < 20; i++) {

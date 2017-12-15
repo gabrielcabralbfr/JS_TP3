@@ -18,22 +18,6 @@ body {
     margin: 5px;
 }
 
-.slideIn{
-    height: 100%;
-    opacity: 1;
-    -webkit-transition:  opacity .8s, height .6s; /* Safari */
-    transition: opacity .8s, height .6s;
-}
-.slideOut{
-    opacity: 0;
-    -webkit-transition:  opacity .8s, height .6s; /* Safari */
-    transition: opacity .8s, height .6s;
-    height: 0;
-}
-
-span { 
-    visibility: hidden;
-}
 
 label{
     display: block;
